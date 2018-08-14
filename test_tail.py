@@ -32,3 +32,8 @@ def test_recurse_error():
 
 def test_no_recurse_error():
     add_tail(1e5, 0)
+
+def test_funny():
+    from inspect import getsource
+    print(fac.__name__)
+    getsource(fac)

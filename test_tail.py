@@ -1,7 +1,7 @@
 #!/usr/bin/env py.test
 
 import pytest
-from tailrec import Tailrec
+from tailrec import Tailrec, ASTTailrec
 
 
 def add_recur(a, b):
@@ -37,3 +37,12 @@ def test_recurse_error():
 def test_no_recurse_error():
     add_tail(1e5, 0)
 
+
+@ASTTailrec
+def add_ast(a, b):
+    if a <= 0: return b
+    return add_ast(a - 1, b + 1)
+
+
+def test_no_recurse_error_ast():
+    add_recur(1e5, 0)

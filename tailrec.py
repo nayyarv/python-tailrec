@@ -11,7 +11,6 @@ from textwrap import dedent
 __all__ = ["ASTTailrec"]
 
 
-
 class Tailrec:
     def __init__(self, oper):
         if isinstance(oper, Tailrec):

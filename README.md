@@ -17,7 +17,6 @@ from tailrec import ASTTailrec
 def fac(n, k = 1):
     if n == 1:
         return k
-    
     return fac(n = n - 1, k = n * k)
 
 print("200! =", fac(200))
